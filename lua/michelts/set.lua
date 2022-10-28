@@ -25,6 +25,9 @@ vim.opt.undofile = true
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
+-- Autocomplete on tab by first listing the folders and then itering the options
+vim.opt.wildmode = "list:longest,list:full"
+
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.isfname:append("@-@")
@@ -32,6 +35,10 @@ vim.opt.isfname:append("@-@")
 -- Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 -- delays and poor user experience.
 vim.opt.updatetime = 50
+
+
+-- Use the CTRL-C clipboard, instead of the middle-mouse clipboard
+vim.opt.clipboard = 'unnamedplus'
 
 -- Don't pass messages to |ins-completion-menu|.
 vim.opt.shortmess:append("c")
